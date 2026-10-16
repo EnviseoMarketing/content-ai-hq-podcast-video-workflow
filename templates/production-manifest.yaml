@@ -1,0 +1,103 @@
+# Copy this file for each episode. This is an EDL-style production plan,
+# not a prompt to be shown verbatim to an image/video model.
+project:
+  title: "AI Video Workflows Just Changed"
+  slug: "ai-video-workflows-just-changed"
+  ratio: "16:9"
+  target_runtime_seconds: 600
+  output: "youtube_landscape"
+  status: "draft"
+
+hosts:
+  alex:
+    role: "host / practical moderator"
+    clonevoice_voice: "Alex Mercer"
+    talkingphotos_image: "assets/hosts/alex-16x9.png"
+  maya:
+    role: "AI strategist / optimist"
+    clonevoice_voice: "Maya Chen"
+    talkingphotos_image: "assets/hosts/maya-16x9.png"
+  jack:
+    role: "business owner / constructive skeptic"
+    clonevoice_voice: "Jack Reynolds"
+    talkingphotos_image: "assets/hosts/jack-16x9.png"
+
+source_media:
+  - id: "WEBINAR_WORKFLOWS"
+    title: "VideoExpress workflow webinar"
+    path_or_url: "assets/source/webinar.mp4"
+    rights_confirmed: false
+    clips:
+      - id: "DEMO_HYBRID_PLAYBOOK"
+        in: "00:51:03"
+        out: "00:53:51"
+        description: "Combining two playbooks into a new reusable workflow."
+
+segments:
+  - id: "ALEX_001"
+    speaker: "alex"
+    audio_file: "audio/ALEX_001.wav"
+    dialogue: "Something significant just changed with AI video."
+    visual: "talking_head"
+    desired_duration_seconds: 9
+    notes: "Opening direct-to-camera."
+
+  - id: "MAYA_001"
+    speaker: "maya"
+    audio_file: "audio/MAYA_001.wav"
+    dialogue: "The change is not just another model. It is the workflow around the models."
+    visual: "talking_head"
+    desired_duration_seconds: 10
+
+  - id: "JACK_001"
+    speaker: "jack"
+    audio_file: "audio/JACK_001.wav"
+    dialogue: "That sounds like something I need a computer-science degree to understand."
+    visual: "talking_head"
+    desired_duration_seconds: 7
+
+  - id: "ALEX_002"
+    speaker: "alex"
+    audio_file: "audio/ALEX_002.wav"
+    dialogue: "Here is the demonstration that makes the idea concrete."
+    visual: "source_clip"
+    source_clip_id: "DEMO_HYBRID_PLAYBOOK"
+    desired_duration_seconds: 12
+    notes: "Keep Alex audio audible under the source clip; mute source clip audio unless deliberately quoted."
+
+  - id: "MAYA_002"
+    speaker: "maya"
+    audio_file: "audio/MAYA_002.wav"
+    dialogue: "A workflow is a saved production playbook rather than a single giant prompt."
+    visual: "generated_graphic"
+    desired_duration_seconds: 12
+    broll_brief: "Clean animated 16:9 flow diagram: idea to ChatGPT to playbook to VideoExpress to finished video; dark navy and warm amber Content AI HQ palette; no logos or text unless explicitly supplied as graphic text."
+
+assembly_rules:
+  # Do not cut to a new talking head for every speaker turn.
+  max_consecutive_talking_head_segments: 3
+  minimum_talking_head_hold_seconds: 6
+  default_visual_for_explanation: "generated_graphic_or_broll"
+  return_to_host_after_non_host_seconds: 45
+  source_clip_default_audio: "muted_under_podcast_audio"
+  source_clip_max_continuous_seconds: 20
+  captions: "enabled_for_final_video"
+  speaker_labels: "off_by_default"
+  transitions: "simple_cut_or_short_dissolve_only"
+  broll_ratio: "16:9"
+  final_audio: "podcast_dialogue_is_primary; duck_music_and_source_audio_under_speech"
+
+timeline_order:
+  - "ALEX_001"
+  - "MAYA_001"
+  - "JACK_001"
+  - "ALEX_002"
+  - "MAYA_002"
+
+validation:
+  - "Every audio file resolves to a labeled speaker segment."
+  - "Every source_clip segment has a source id and validated in/out timestamps."
+  - "TalkingPhotos is requested only for talking_head segments."
+  - "No more than three consecutive talking-head segments appear without a visual reset."
+  - "All assembly assets are 16:9 or deliberately cropped/composed for 16:9."
+  - "The VideoExpress timeline ends at the right edge of the final approved audio segment."
