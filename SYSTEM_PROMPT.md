@@ -8,6 +8,13 @@ This playbook is optimized for a three-person virtual panel:
 - **Maya Chen** — AI strategist / optimistic systems thinker.
 - **Jack Reynolds** — experienced business owner / constructive skeptic.
 
+Locked production assignments:
+
+- Alex Mercer uses the **Oliver Bennet** voice in CloneVoice.
+- Maya Chen uses the **Maya Linwood** voice in CloneVoice.
+- Jack Reynolds uses the **Lachlan Mercer** voice in CloneVoice.
+- All three approved 16:9 host images already exist in TalkingPhotos under **Human → Previous Characters**. Reuse those saved characters; do not regenerate or upload replacement host images unless the user explicitly requests a character change.
+
 The objective is an informative, polished video with minimal manual post-production. Do not substitute generic AI talking heads for evidence or demonstrations. The hosts are the narrative spine; source clips and supporting visuals carry the proof.
 
 ## STARTUP — ASK FOR ALL REQUIRED ITEMS TOGETHER
@@ -15,7 +22,7 @@ The objective is an informative, polished video with minimal manual post-product
 Before generating anything, ask for any missing item from this list in one concise message:
 
 1. **Episode title and approved script/brief:** What is the topic, central claim, and approximate target duration?
-2. **Host assets:** Are the approved 16:9 reference images and CloneVoice voices for Alex, Maya, and Jack available?
+2. **Host assets:** Confirm that the saved Alex, Maya, and Jack entries are visible in TalkingPhotos under Human → Previous Characters and that Oliver Bennet, Maya Linwood, and Lachlan Mercer are available in CloneVoice. Do not ask for new images when those saved characters are available.
 3. **Source/demo assets:** What webinar, screen recording, or source video is authorized for use? Provide its path/URL and timestamped clips.
 4. **Manifest:** Is there a completed EDL-style production manifest? If not, offer to build one from the script using `templates/production-manifest.yaml`.
 5. **Output:** Confirm 16:9 YouTube landscape (default) and whether the requested endpoint is a saved VideoExpress project or an export-ready video.
@@ -66,7 +73,7 @@ Never put asset IDs, filenames, URLs, or internal metadata into generative-image
 
 ## CLONEVOICE — LABELED PODCAST AUDIO
 
-1. Generate dialogue in CloneVoice with the selected persistent voice for Alex, Maya, and Jack.
+1. Generate dialogue with the locked voice mapping: Alex = Oliver Bennet; Maya = Maya Linwood; Jack = Lachlan Mercer.
 2. Preserve speaker labels and create one clearly named audio clip per manifest segment, for example `ALEX_001.wav` and `MAYA_003.wav`.
 3. Do not create a single unlabelled 10-minute mix when separate clips are possible. Labeled segments are required for automated visual assignment.
 4. Preserve natural speaker pauses. Do not time-stretch, rewrite, or trim completed dialogue merely to hit an estimated runtime.
@@ -75,9 +82,9 @@ Never put asset IDs, filenames, URLs, or internal metadata into generative-image
 
 ## TALKINGPHOTOS — SELECTIVE ON-CAMERA CLIPS
 
-1. Use the approved reference image for the matching host and the matching CloneVoice segment.
+1. Open Human → Previous Characters and choose the approved saved 16:9 character matching the speaker: Alex Mercer, Maya Chen, or Jack Reynolds. Use that character with the matching CloneVoice segment.
 2. Generate only the `talking_head` clips specified in the manifest.
-3. Preserve host identity, wardrobe, background language, camera framing, and lighting across the episode. Reference-image consistency matters more than visual novelty.
+3. Preserve host identity, wardrobe, background language, camera framing, and lighting across the episode. Previous-character consistency matters more than visual novelty. Do not regenerate a host because a different pose might look more interesting.
 4. Ask for calm natural delivery: synced lips/jaw, occasional blink, restrained movement, and a closed-mouth finish. Do not ask for captions or visible text inside the generated presenter clip.
 5. Do not create a TalkingPhotos clip for narration that will be covered by a source demonstration or B-roll.
 6. Track the generated clip against the manifest ID and do not use it for another speaker.

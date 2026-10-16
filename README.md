@@ -28,8 +28,8 @@ That keeps the finished video visually useful, reduces TalkingPhotos generation 
 ## Required inputs
 
 - A podcast brief or approved script with speaker labels.
-- CloneVoice voices for Alex, Maya, and Jack.
-- One consistent 16:9 reference image for each host; optional alternate expression/angle images.
+- Locked CloneVoice assignments: Alex = **Oliver Bennet**, Maya = **Maya Linwood**, Jack = **Lachlan Mercer**.
+- Existing 16:9 Alex, Maya, and Jack assets in TalkingPhotos under **Human → Previous Characters**.
 - Any source/webinar videos with clip timestamps and the right to use them.
 - A filled production manifest based on [`templates/production-manifest.yaml`](templates/production-manifest.yaml).
 - 16:9 as the output ratio (this playbook is optimized for YouTube landscape).
