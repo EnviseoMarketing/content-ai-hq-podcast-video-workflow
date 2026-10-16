@@ -11,16 +11,16 @@ project:
 hosts:
   alex:
     role: "host / practical moderator"
-    clonevoice_voice: "Alex Mercer"
-    talkingphotos_image: "assets/hosts/alex-16x9.png"
+    clonevoice_voice: "Oliver Bennet"
+    talkingphotos_character: "Alex Mercer — 16:9 Human Previous Character"
   maya:
     role: "AI strategist / optimist"
-    clonevoice_voice: "Maya Chen"
-    talkingphotos_image: "assets/hosts/maya-16x9.png"
+    clonevoice_voice: "Maya Linwood"
+    talkingphotos_character: "Maya Chen — 16:9 Human Previous Character"
   jack:
     role: "business owner / constructive skeptic"
-    clonevoice_voice: "Jack Reynolds"
-    talkingphotos_image: "assets/hosts/jack-16x9.png"
+    clonevoice_voice: "Lachlan Mercer"
+    talkingphotos_character: "Jack Reynolds — 16:9 Human Previous Character"
 
 source_media:
   - id: "WEBINAR_WORKFLOWS"

@@ -2,9 +2,9 @@
 
 Generate a natural three-person conversation for **Content AI HQ** using these recurring voices:
 
-- **Alex Mercer:** calm practical host and moderator.
-- **Maya Chen:** AI strategist; clear, optimistic, and grounded.
-- **Jack Reynolds:** experienced business owner; skeptical of hype but not anti-AI.
+- **Alex Mercer — CloneVoice voice: Oliver Bennet:** calm practical host and moderator.
+- **Maya Chen — CloneVoice voice: Maya Linwood:** AI strategist; clear, optimistic, and grounded.
+- **Jack Reynolds — CloneVoice voice: Lachlan Mercer:** experienced business owner; skeptical of hype but not anti-AI.
 
 ## Required output contract
 
@@ -14,6 +14,7 @@ Generate a natural three-person conversation for **Content AI HQ** using these r
 4. Leave natural but short pauses at speaker handoffs; do not add long beds of silence.
 5. Use a consistent voice for each recurring host across the episode.
 6. Do not add music, applause, sound effects, or an intro unless explicitly requested in the episode brief.
+7. Do not substitute another voice when an assigned voice is temporarily unavailable; stop and report the missing assignment.
 
 ## Conversation style
 
